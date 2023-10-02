@@ -7,6 +7,45 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Doe hier jouw ding! */
+      body {
+        margin:0;
+
+        display: grid;
+        grid-template-rows: 1fr max-content max-content;
+        /* grid-template-columns: repeat(4, 1fr); */
+        /* grid-template-columns:1fr; */
+        /* grid-column-gap: .5rem; */
+        /* grid-row-gap: .5rem; */
+        /*  */
+        grid-template-areas: 
+          "headernav"
+          "main"
+          "footer";
+
+        gap:.5rem;
+        align-items: center;        
+      }
+
+      /* beetje viezig - normaal bepaalt content hoogte van element  */
+      body > * {
+        height:4em;
+      }
+
+
+      header {
+        grid-area: headernav;
+        rotate:15deg;
+      }
+      nav {
+        grid-area: headernav;
+        rotate:-15deg;
+      }
+      main {
+        grid-area: main;
+      }
+      footer {
+        grid-area: footer;
+      }
     </style>
   </head>
   <body id="advanced-layout-2">
